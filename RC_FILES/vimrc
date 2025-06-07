@@ -1,0 +1,77 @@
+"-----------------------------
+" General Settings
+"-----------------------------
+set nocompatible
+filetype off
+
+set number
+set relativenumber
+set tabstop=4
+set shiftwidth=4
+set expandtab
+set smartindent
+set autoindent
+set showcmd
+set cursorline
+set mouse=a
+syntax on
+filetype plugin indent on
+
+set hlsearch
+set incsearch
+set ignorecase
+set smartcase
+
+set background=dark
+colorscheme desert
+
+"-----------------------------
+" Vundle Setup
+"-----------------------------
+set rtp+=~/.vim/bundle/Vundle.vim
+call vundle#begin()
+
+Plugin 'VundleVim/Vundle.vim'
+
+" File Tree
+Plugin 'preservim/nerdtree'
+
+" Status line
+Plugin 'vim-airline/vim-airline'
+Plugin 'vim-airline/vim-airline-themes'
+
+" Language support
+Plugin 'sheerun/vim-polyglot'
+
+" Linting and autocomplete
+Plugin 'neoclide/coc.nvim', {'branch': 'release'}
+
+" Git integration
+Plugin 'tpope/vim-fugitive'
+Plugin 'mhinz/vim-signify'
+command! Ginit !git init
+
+call vundle#end()
+
+"-----------------------------
+" Plugin Config
+"-----------------------------
+" Toggle NERDTree with Ctrl+n
+nmap <C-n> :NERDTreeToggle<CR>
+
+" Airline settings
+let g:airline_theme='dark'
+let g:airline_powerline_fonts = 1
+
+" coc.nvim tab completion
+inoremap <expr> <TAB> pumvisible() ? "\<C-n>" : "\<TAB>"
+inoremap <expr> <S-TAB> pumvisible() ? "\<C-p>" : "\<S-TAB>"
+
+" Highlight trailing whitespace
+match ErrorMsg '\s\+$'
+
+" Filetype-specific indentation
+autocmd FileType python setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType rust setlocal tabstop=4 shiftwidth=4 expandtab
+autocmd FileType c,cpp setlocal tabstop=4 shiftwidth=4 expandtab
+
