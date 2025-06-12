@@ -1,0 +1,10 @@
+alias lab1="sudo openvpn ~/training/lab1/lab1.ovpn"
+alias lab2="sudo openvpn ~/training/lab2/lab2.ovpn"
+alias pg_lab="sudo openvpn ~/.vpn/pg_lab.ovpn"
+alias client_test="sudo openvpn ~/.vpn/client_test.ovpn"
+alias sp_test="sudo openvpn ~/.vpn/starting_point_user.ovpn"
+alias alt_client="sudo openvpn ~/.vpn/alt_client.ovpn"
+alias jumpbox_access="ssh -J bastion1,bastion2 target_host"
+alias myip="curl icanhazip.com"
+alias dualgit="git push -u origin main && git push -u work main"
+
