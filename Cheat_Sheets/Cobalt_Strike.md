@@ -195,5 +195,4 @@ spawnas user pass              → Run as another user
 
 ---
 
-Let me know if you want this paired with **redirector setup**, **Evasion Profiles**, or **Aggressor Script snippets for automated workflows**.
 
